@@ -8,40 +8,26 @@ function CharactersBanner(props) {
     transition: { duration: 2 },
   };
 
-  var backgroundFix = {
-    backgroundImage: `url("${props.character.banner}")`,
-    backgroundPosition: "center",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-  };
-
-  const characterBanner = {
-    display: "flex",
-    justifyContent: "space-around",
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
-  };
-
   return (
-    <div style={{ ...backgroundFix }}>
-      <div style={{ ...characterBanner }}>
+    <div
+      className="bg-center bg-no-repeat sm:bg-cover lg:bg-contain"
+      style={{ backgroundImage: `url("${props.character.banner}")` }}
+    >
+      <div className="flex justify-around bg-black bg-opacity-70">
         {props.right ? (
           <>
-            <motion.div {...animationValues} style={{ width: "50%" }}>
-              <div style={{ marginBottom: "3em" }}>
-                <h2
-                  style={{ marginBottom: 0, fontSize: "42px" }}
-                >{`"${props.character.name}"`}</h2>
-                <p style={{ marginTop: "0.3em" }}>
-                  &nbsp;&nbsp;-{props.character.alias}
-                </p>
+            <motion.div {...animationValues} className="mt-7 w-2/4">
+              <div className="mb-20">
+                <h2 className="mb-0 text-5xl">{`"${props.character.name}"`}</h2>
+                <p>&nbsp;&nbsp;-{props.character.alias}</p>
               </div>
               <p style={{ wordWrap: "break-word" }}>{props.character.desc}</p>
             </motion.div>
             <motion.div {...animationValues}>
               <img
                 src={props.character.image}
+                className="max-h-96"
                 style={{
-                  maxHeight: 500,
                   maskImage: "linear-gradient(black 80%, transparent)",
                 }}
               ></img>
@@ -52,20 +38,16 @@ function CharactersBanner(props) {
             <motion.div {...animationValues}>
               <img
                 src={props.character.image}
+                className="max-h-96"
                 style={{
-                  maxHeight: 500,
                   maskImage: "linear-gradient(black 80%, transparent)",
                 }}
               ></img>
             </motion.div>
-            <motion.div {...animationValues} style={{ width: "50%" }}>
-              <div style={{ marginBottom: "3em" }}>
-                <h2
-                  style={{ marginBottom: 0, fontSize: "42px" }}
-                >{`"${props.character.name}"`}</h2>
-                <p style={{ marginTop: "0.3em" }}>
-                  &nbsp;&nbsp;-{props.character.alias}
-                </p>
+            <motion.div {...animationValues} className="mt-7 w-2/4">
+              <div className="mb-20">
+                <h2 className="mb-0 text-5xl">{`"${props.character.name}"`}</h2>
+                <p>&nbsp;&nbsp;-{props.character.alias}</p>
               </div>
               <p style={{ wordWrap: "break-word" }}>{props.character.desc}</p>
             </motion.div>
