@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 body {
-    font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    background-color: black;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  background-color: black;
 }
 
 button {
@@ -23,4 +23,3 @@ a {
 ul {
   list-style: none;
 }
-

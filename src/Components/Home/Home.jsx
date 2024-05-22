@@ -1,12 +1,15 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import charactesImage from "../../images/characters.jpg";
 import familyTreeImage from "../../images/familytreeextended.webp";
 import homeImage from "../../images/homeimage.jpg";
 import secondSectionImage from "../../images/jonsnow.jpg";
-import logo from "../../images/logos/gameofthroneslogo.png";
+/* import logo from "../../images/logos/gameofthroneslogo.png"; */
 import makingOffImage from "../../images/mackingoff.webp";
 
 function Home() {
+  const AnimatedLink = motion(Link);
+
   return (
     <main>
       <div
@@ -14,10 +17,13 @@ function Home() {
         style={{ backgroundImage: `url(${homeImage})` }}
       >
         <div className="flex h-full flex-col items-center bg-[rgba(0,0,0,0.5)]">
-          <Link to={"/"} className="mb-36">
+          {/* <Link to={"/"} className="mb-36">
             <img src={logo} width="800px" alt="" />
-          </Link>
-          <p className="mb-5 text-4xl"> Who will sit on the iron throne? </p>
+          </Link> */}
+          <p className="mb-5 mt-96 text-4xl">
+            {" "}
+            Who will sit on the iron throne?{" "}
+          </p>
           <div className="flex items-center justify-evenly">
             <iframe
               width="1400"
@@ -40,13 +46,13 @@ function Home() {
       >
         <div className="flex w-full flex-col items-center justify-center bg-[rgba(0,0,0,0.5)]">
           <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl">
-            <Link to={"/"}>
+            <AnimatedLink whileHover={{ scale: 1.1 }} to={"/"}>
               <img
                 className="max-h-72 rounded-xl"
                 src={familyTreeImage}
                 alt="arbol familiar"
               />
-            </Link>
+            </AnimatedLink>
             <div className="flex w-2/4 flex-col">
               <p className="w-full">
                 Mira el arbol genialogico y enterate de todos los vinculos entre
@@ -74,23 +80,23 @@ function Home() {
                 Ver mas
               </Link>
             </div>
-            <Link to={"characters"}>
+            <AnimatedLink whileHover={{ scale: 1.1 }} to={"characters"}>
               <img
                 className="max-h-72 rounded-xl"
                 src={charactesImage}
                 alt="5 de los personajes de la serie"
               />
-            </Link>
+            </AnimatedLink>
           </div>
 
           <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl">
-            <Link to={"/"}>
+            <AnimatedLink whileHover={{ scale: 1.1 }} to={"/"}>
               <img
                 className="max-h-72 rounded-xl"
                 src={makingOffImage}
                 alt="foto del macking off"
               />
-            </Link>
+            </AnimatedLink>
             <div className="flex w-2/4 flex-col">
               <p className="w-full">
                 Mira el arbol genialogico y enterate de todos los vinculos entre

@@ -34,13 +34,13 @@ export default function Nav() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
+                <Link to={"/"} className="flex flex-shrink-0 items-center">
                   <img
                     className="h-14 w-auto"
                     src={gotlogo}
                     alt="Your Company"
                   />
-                </div>
+                </Link>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (

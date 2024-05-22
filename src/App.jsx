@@ -1,12 +1,12 @@
 import "./App.css";
 import Footer from "./Components/Footer/Footer.jsx";
 import Home from "./Components/Home/Home.jsx";
-import Nav from "./Components/Nav/Nav.jsx";
+import NavHome from "./Components/Nav/NavHome.jsx";
 
 function App() {
   return (
     <>
-      <Nav />
+      <NavHome />
       <Home></Home>
       <Footer></Footer>
     </>

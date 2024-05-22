@@ -11,7 +11,7 @@ import * as objects from "./CharactersObject.jsx";
 
 function Characters() {
   return (
-    <main>
+    <main className="overflow-hidden">
       <div className={styles.firstCharactersSection}>
         <HouseCard title="Baratheon" image={Baratheon}></HouseCard>
         <HouseCard title="Hightower" image={Hightower}></HouseCard>

@@ -1,70 +1,82 @@
-import daenerysImage from '../../images/characters/Daeneryspng.png';
-import ariaImage from '../../images/characters/ariapng.png';
-import branImage from '../../images/characters/branpng.png';
-import eddardImage from '../../images/characters/eddardpng.png';
-import jonSnowImage from '../../images/characters/jonsnowpng3.png';
-import rhaegarImage from '../../images/characters/rhaegarpng.png';
-import sansaImage from '../../images/characters/sansapng.png';
-import starkBanner from '../../images/characters/starkbanner2.jpg';
-import targaryenBanner from '../../images/characters/targaryenbanner.jpg';
+import daenerysImage from "../../images/characters/Daeneryspng.png";
+import ariaImage from "../../images/characters/ariapng.png";
+import branImage from "../../images/characters/branpng.png";
+import eddardImage from "../../images/characters/eddardpng.png";
+import jonSnowImage from "../../images/characters/jonsnowpng3.png";
+import rhaegarImage from "../../images/characters/rhaegarpng.png";
+import sansaImage from "../../images/characters/sansapng.png";
+import starkBanner from "../../images/characters/starkbanner2.jpg";
+import targaryenBanner from "../../images/characters/targaryenbanner.jpg";
 
 const jonSnow = {
-    name: "Jon Snow",
-    alias: "The Bastard of Winterfell",
-    desc: "Lord Jon Nieve es el Lord Comandante de la Guardia de la Noche nº 998. Es hijo bastardo de Lord Eddard Stark. Su lobo huargo, Fantasma, es albino y mudo. El emblema personal de Jon consiste en los colores de la Casa Stark invertidos, un lobo huargo de plata corriendo sobre fondo de cenizo.",
-    image: jonSnowImage,
-    banner: starkBanner,
+  name: "Jon Snow",
+  alias: "The Bastard of Winterfell",
+  desc: "Jon Snow es el hijo bastardo de Eddard Stark, criado en Invernalia junto a los hijos legítimos de Ned. Desde joven, siente el peso de su condición de bastardo y decide unirse a la Guardia de la Noche, donde poco a poco se convierte en un líder respetado. A lo largo de la serie, Jon descubre verdades sobre su verdadero linaje que cambian el curso de su vida y el destino de los Siete Reinos.",
+  image: jonSnowImage,
+  banner: starkBanner,
+  characterLink: "jonsnow",
 };
 
 const eddardStark = {
-    name: "Eddard Snow",
-    alias: "The Quiet Wolf",
-    desc: "Lord Jon Nieve es el Lord Comandante de la Guardia de la Noche nº 998. Es hijo bastardo de Lord Eddard Stark. Su lobo huargo, Fantasma, es albino y mudo. El emblema personal de Jon consiste en los colores de la Casa Stark invertidos, un lobo huargo de plata corriendo sobre fondo de cenizo.",
-    image: eddardImage,
-    banner: starkBanner,
+  name: "Eddard Snow",
+  alias: "The Quiet Wolf",
+  desc: "Eddard 'Ned' Stark es el honorable Señor de Invernalia y Guardián del Norte. Es conocido por su sentido del deber y la justicia. Tras la muerte de su mentor, Jon Arryn, Ned es llamado a Desembarco del Rey por su viejo amigo, el Rey Robert Baratheon, para servir como Mano del Rey. Sus intentos por desentrañar la verdad sobre la muerte de Jon Arryn y la legitimidad de los hijos de Robert lo llevan a un trágico destino.",
+  image: eddardImage,
+  banner: starkBanner,
+  characterLink: "eddardstark",
 };
 
 const ariaStark = {
-    name: "Aria Stark",
-    alias: "The cat of the Canals",
-    desc: "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-    image: ariaImage,
-    banner: starkBanner,
+  name: "Arya Stark",
+  alias: "The cat of the Canals",
+  desc: "Arya Stark es la hija menor de Eddard y Catelyn Stark. Desde pequeña, muestra un espíritu indomable y una habilidad para la lucha que no encajan con los roles tradicionales de las mujeres nobles. Tras la ejecución de su padre, Arya huye y comienza un largo viaje lleno de peligros y entrenamiento con los Hombres sin Rostro en Braavos, convirtiéndose en una asesina implacable con una lista de venganza.",
+  image: ariaImage,
+  banner: starkBanner,
+  characterLink: "aryastark",
 };
 
 const sansaStark = {
-    name: "Sansa Stark",
-    alias: "La mas nazi",
-    desc: "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-    image: sansaImage,
-    banner: starkBanner,
+  name: "Sansa Stark",
+  alias: "Queen of the north",
+  desc: "Sansa Stark es la hija mayor de Eddard y Catelyn Stark. Al principio, es una joven ingenua con sueños de ser una dama y casarse con un príncipe, pero su tiempo en Desembarco del Rey y su matrimonio forzado con Tyrion Lannister la obligan a madurar rápidamente. A lo largo de la serie, Sansa se convierte en una mujer astuta y fuerte, aprendiendo a navegar los peligros y las intrigas políticas de Poniente.",
+  image: sansaImage,
+  banner: starkBanner,
+  characterLink: "sansastark",
 };
 
 const branStark = {
-    name: "Bran Stark",
-    alias: "The Three-Eyed Raven",
-    desc: "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-    image: branImage,
-    banner: starkBanner,
+  name: "Bran Stark",
+  alias: "The Three-Eyed Raven",
+  desc: "Brandon 'Bran' Stark es el hijo mediano de Eddard y Catelyn Stark. Tras un misterioso accidente que lo deja paralizado de la cintura para abajo, Bran comienza a experimentar visiones y sueños proféticos. Eventualmente, descubre que tiene la habilidad de warg, o entrar en la mente de otros seres vivos, y se convierte en el Cuervo de Tres Ojos, una entidad mística con la capacidad de ver el pasado, el presente y el futuro.",
+  image: branImage,
+  banner: starkBanner,
+  characterLink: "branstark",
 };
 
 const daenerys = {
-    name: "Daenerys Targaryen",
-    alias: "La mas nazi",
-    desc: "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-    image: daenerysImage,
-    banner: targaryenBanner,
+  name: "Daenerys Targaryen",
+  alias: "Mother of Dragons",
+  desc: "Daenerys Targaryen es la última hija de Aerys II Targaryen, el Rey Loco, derrocado durante la Rebelión de Robert. Exiliada desde niña, Daenerys crece en Essos bajo la protección de su hermano Viserys. Tras casarse con el líder dothraki Khal Drogo, comienza su transformación de una joven tímida a una poderosa reina conocida como la Madre de Dragones. Su objetivo es recuperar el Trono de Hierro y liberar a los oprimidos.",
+  image: daenerysImage,
+  banner: targaryenBanner,
+  characterLink: "daenerystargaryen",
 };
 
 const rhaegarTargaryen = {
-    name: "Rhaegar Targaryen",
-    alias: "The last dragon",
-    desc: "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-    image: rhaegarImage,
-    banner: targaryenBanner,
+  name: "Rhaegar Targaryen",
+  alias: "The last dragon",
+  desc: "Rhaegar Targaryen fue el príncipe heredero de los Siete Reinos, hijo de Aerys II Targaryen. Era conocido por su belleza, habilidad en la batalla y su amor por la música. Su aparente secuestro de Lyanna Stark desencadenó la Rebelión de Robert, aunque más tarde se revela que los dos estaban enamorados y casados en secreto. La muerte de Rhaegar en la Batalla del Tridente marcó el comienzo del fin de la dinastía Targaryen.",
+  image: rhaegarImage,
+  banner: targaryenBanner,
+  characterLink: "rhaegartargaryen",
 };
 
-
-
-export { ariaStark, branStark, daenerys, eddardStark, jonSnow, rhaegarTargaryen, sansaStark };
-
+export {
+  ariaStark,
+  branStark,
+  daenerys,
+  eddardStark,
+  jonSnow,
+  rhaegarTargaryen,
+  sansaStark,
+};

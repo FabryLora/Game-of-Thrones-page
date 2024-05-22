@@ -1,12 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function CharactersBanner(props) {
-  const animationValues = {
-    initial: { opacity: 0 },
-    whileInView: { opacity: 1 },
-    transition: { duration: 2 },
-  };
+  const AnimatedLink = motion(Link);
 
   return (
     <div
@@ -15,15 +12,22 @@ function CharactersBanner(props) {
     >
       <div className="flex justify-around bg-black bg-opacity-70">
         {props.right ? (
-          <>
-            <motion.div {...animationValues} className="mt-7 w-2/4">
+          <MotionConfig
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5 }}
+            initial={{ opacity: 0 }}
+          >
+            <motion.div initial={{ x: -200 }} className="mt-7 w-2/4">
               <div className="mb-20">
                 <h2 className="mb-0 text-5xl">{`"${props.character.name}"`}</h2>
                 <p>&nbsp;&nbsp;-{props.character.alias}</p>
               </div>
               <p style={{ wordWrap: "break-word" }}>{props.character.desc}</p>
             </motion.div>
-            <motion.div {...animationValues}>
+            <AnimatedLink
+              to={props.character.characterLink}
+              initial={{ x: 200 }}
+            >
               <img
                 src={props.character.image}
                 className="max-h-96"
@@ -31,11 +35,15 @@ function CharactersBanner(props) {
                   maskImage: "linear-gradient(black 80%, transparent)",
                 }}
               ></img>
-            </motion.div>
-          </>
+            </AnimatedLink>
+          </MotionConfig>
         ) : (
           <>
-            <motion.div {...animationValues}>
+            <motion.div
+              initial={{ opacity: 0, x: -200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
               <img
                 src={props.character.image}
                 className="max-h-96"
@@ -44,7 +52,12 @@ function CharactersBanner(props) {
                 }}
               ></img>
             </motion.div>
-            <motion.div {...animationValues} className="mt-7 w-2/4">
+            <motion.div
+              initial={{ opacity: 0, x: 200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className="mt-7 w-2/4"
+            >
               <div className="mb-20">
                 <h2 className="mb-0 text-5xl">{`"${props.character.name}"`}</h2>
                 <p>&nbsp;&nbsp;-{props.character.alias}</p>
