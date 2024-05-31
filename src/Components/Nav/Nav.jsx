@@ -65,7 +65,7 @@ export default function Nav() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+            <div className="absolute w-full space-y-1 rounded-b-lg bg-black px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}

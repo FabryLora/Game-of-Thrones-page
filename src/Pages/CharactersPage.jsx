@@ -1,15 +1,15 @@
-import Characters from '../Components/Characters/Characters.jsx';
-import Footer from '../Components/Footer/Footer.jsx';
-import Nav from '../Components/Nav/Nav.jsx';
+import Characters from "../Components/Characters/Characters.jsx";
+import Footer from "../Components/Footer/Footer.jsx";
+import NewNav from "../Components/Nav/NewNav.jsx";
 
 function CharactersPage() {
-    return(
-        <>
-        <Nav></Nav>
-        <Characters></Characters>
-        <Footer></Footer>
-        </>
-    );
+  return (
+    <>
+      <NewNav></NewNav>
+      <Characters></Characters>
+      <Footer></Footer>
+    </>
+  );
 }
 
 export default CharactersPage;

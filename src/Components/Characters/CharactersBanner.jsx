@@ -38,11 +38,14 @@ function CharactersBanner(props) {
             </AnimatedLink>
           </MotionConfig>
         ) : (
-          <>
-            <motion.div
-              initial={{ opacity: 0, x: -200 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+          <MotionConfig
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5 }}
+            initial={{ opacity: 0 }}
+          >
+            <AnimatedLink
+              to={props.character.characterLink}
+              initial={{ x: -200 }}
             >
               <img
                 src={props.character.image}
@@ -51,20 +54,15 @@ function CharactersBanner(props) {
                   maskImage: "linear-gradient(black 80%, transparent)",
                 }}
               ></img>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 200 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className="mt-7 w-2/4"
-            >
+            </AnimatedLink>
+            <motion.div initial={{ x: 200 }} className="mt-7 w-2/4">
               <div className="mb-20">
                 <h2 className="mb-0 text-5xl">{`"${props.character.name}"`}</h2>
                 <p>&nbsp;&nbsp;-{props.character.alias}</p>
               </div>
               <p style={{ wordWrap: "break-word" }}>{props.character.desc}</p>
             </motion.div>
-          </>
+          </MotionConfig>
         )}
       </div>
     </div>
@@ -78,6 +76,7 @@ CharactersBanner.propTypes = {
     alias: PropTypes.string,
     desc: PropTypes.string,
     image: PropTypes.string,
+    characterLink: PropTypes.string,
   }).isRequired,
   right: PropTypes.bool,
 };

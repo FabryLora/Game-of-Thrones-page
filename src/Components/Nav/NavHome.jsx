@@ -28,7 +28,7 @@ function NavHome() {
               initial={{ scaleX: 0 }}
               animate={controls}
               transition={{ duration: 0.2 }}
-              className="h-1 w-full rounded-md bg-white"
+              className=" h-1 w-full rounded-md bg-white"
             ></motion.div>
           </div>
 
