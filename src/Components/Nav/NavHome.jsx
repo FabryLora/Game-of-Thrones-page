@@ -105,10 +105,10 @@ function NavHome() {
         </ul>
 
         <Link to={"/"}>
-          <img src={logo} width={600} alt="" />
+          <img src={logo} className="w-[600px]" alt="" />
         </Link>
 
-        <ul className="flex w-1/4 justify-evenly">
+        <ul className="flex w-1/4 justify-evenly max-md:hidden">
           <Link to={"/"}>Nidea</Link>
           <Link to={"/"}>LoLos</Link>
         </ul>

@@ -13,21 +13,20 @@ function Home() {
   return (
     <main>
       <div
-        className="bg-cover bg-center bg-no-repeat"
+        className="max-md:bg-pos bg-cover bg-center bg-no-repeat max-md:h-screen"
         style={{ backgroundImage: `url(${homeImage})` }}
       >
-        <div className="flex h-full flex-col items-center bg-[rgba(0,0,0,0.5)]">
+        <div className="flex h-full flex-col items-center bg-[rgba(0,0,0,0.5)] max-md:justify-center">
           {/* <Link to={"/"} className="mb-36">
             <img src={logo} width="800px" alt="" />
           </Link> */}
-          <p className="mb-5 mt-96 text-4xl">
+          <p className="mb-5 mt-96 text-4xl font-bold max-md:mt-10 max-md:text-center max-md:text-2xl ">
             {" "}
             Who will sit on the iron throne?{" "}
           </p>
-          <div className="flex items-center justify-evenly">
+          <div className="flex items-center justify-evenly max-md:h-[220px] max-md:w-full">
             <iframe
-              width="1400"
-              height="800"
+              className="h-[50rem] w-[87.5rem] max-md:h-full max-md:w-full"
               src="https://www.youtube.com/embed/bjqEWgDVPe0"
               title="GAME OF THRONES - SEASON 1- TRAILER"
               frameBorder="0"
@@ -45,7 +44,7 @@ function Home() {
         style={{ backgroundImage: `url("${secondSectionImage}")` }}
       >
         <div className="flex w-full flex-col items-center justify-center bg-[rgba(0,0,0,0.5)]">
-          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl">
+          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl max-md:w-[90%] max-md:flex-col max-md:bg-[rgba(0,0,0,0.7)] max-md:p-3">
             <AnimatedLink whileHover={{ scale: 1.1 }} to={"/"}>
               <img
                 className="max-h-72 rounded-xl"
@@ -53,7 +52,7 @@ function Home() {
                 alt="arbol familiar"
               />
             </AnimatedLink>
-            <div className="flex w-2/4 flex-col">
+            <div className="flex w-2/4 flex-col max-md:mt-3 max-md:w-full max-md:items-center">
               <p className="w-full">
                 Mira el arbol genialogico y enterate de todos los vinculos entre
                 personajes para entender mas a profundidad la historia
@@ -67,8 +66,8 @@ function Home() {
             </div>
           </div>
 
-          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl">
-            <div className="flex w-2/4 flex-col">
+          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl max-md:w-[90%] max-md:flex-col max-md:bg-[rgba(0,0,0,0.7)] max-md:p-3">
+            <div className="flex w-2/4 flex-col max-md:order-2 max-md:mt-3 max-md:w-full max-md:items-center">
               <p className="w-full">
                 Mira el arbol genialogico y enterate de todos los vinculos entre
                 personajes para entender mas a profundidad la historia
@@ -80,7 +79,11 @@ function Home() {
                 Ver mas
               </Link>
             </div>
-            <AnimatedLink whileHover={{ scale: 1.1 }} to={"characters"}>
+            <AnimatedLink
+              className="max-md:order-1"
+              whileHover={{ scale: 1.1 }}
+              to={"characters"}
+            >
               <img
                 className="max-h-72 rounded-xl"
                 src={charactesImage}
@@ -89,7 +92,7 @@ function Home() {
             </AnimatedLink>
           </div>
 
-          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl">
+          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl max-md:w-[90%] max-md:flex-col max-md:bg-[rgba(0,0,0,0.7)] max-md:p-3">
             <AnimatedLink whileHover={{ scale: 1.1 }} to={"/"}>
               <img
                 className="max-h-72 rounded-xl"
@@ -97,7 +100,7 @@ function Home() {
                 alt="foto del macking off"
               />
             </AnimatedLink>
-            <div className="flex w-2/4 flex-col">
+            <div className="flex w-2/4 flex-col max-md:mt-3 max-md:w-full max-md:items-center">
               <p className="w-full">
                 Mira el arbol genialogico y enterate de todos los vinculos entre
                 personajes para entender mas a profundidad la historia

@@ -3,6 +3,19 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logos/gotlogopng2.png";
 
+const starkCharacters = [
+  { name: "Jon Snow", href: "/jonsnow" },
+  { name: "Arya", href: "/aryastark" },
+  { name: "Sansa", href: "/sansastark" },
+  { name: "Eddard", href: "/eddardstark" },
+  { name: "Bran", href: "/branstark" },
+];
+
+const targaryenCharacters = [
+  { name: "Daenerys", href: "/daenerystargaryen" },
+  { name: "Rhaegar", href: "/rhaegartargaryen" },
+];
+
 const NewNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -40,7 +53,7 @@ const NewNav = () => {
             onMouseLeave={() =>
               setIsOpen((prev) => !prev, control2.start({ scaleX: 0 }))
             }
-            to={"characters"}
+            to={"/characters"}
           >
             Personajes
           </Link>
@@ -62,40 +75,35 @@ const NewNav = () => {
                 onMouseLeave={() =>
                   setIsOpen((prev) => !prev, control2.start({ scaleX: 0 }))
                 }
-                className="absolute mt-4 flex gap-5 rounded-md bg-[#53504f] p-4"
+                className="absolute z-10 mt-4 flex gap-5 rounded-md bg-[#53504f] p-4"
               >
                 <div>
                   <h2 className="font-bold">Stark:</h2>
-                  <ul>
-                    <li>
-                      <Link className="hover:text-slate-400" to={"jonsnow"}>
-                        Jon Snow
+                  <ul className="flex flex-col">
+                    {starkCharacters.map((item) => (
+                      <Link
+                        key={item.name}
+                        className="hover:text-slate-400"
+                        to={item.href}
+                      >
+                        {item.name}
                       </Link>
-                    </li>
-                    <li>
-                      <Link className="hover:text-slate-400">Arya</Link>
-                    </li>
-                    <li>
-                      <Link className="hover:text-slate-400">Sansa</Link>
-                    </li>
-                    <li>
-                      <Link className="hover:text-slate-400">Eddard</Link>
-                    </li>
-                    <li>
-                      <Link className="hover:text-slate-400">Bran</Link>
-                    </li>
+                    ))}
                   </ul>
                 </div>
 
                 <div className="border-l-2 pl-4">
                   <h2 className="font-bold">Targaryen:</h2>
-                  <ul>
-                    <li>
-                      <Link className="hover:text-slate-400">Denerys</Link>
-                    </li>
-                    <li>
-                      <Link className="hover:text-slate-400">Rhaegar</Link>
-                    </li>
+                  <ul className="flex flex-col">
+                    {targaryenCharacters.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className="hover:text-slate-400"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
                   </ul>
                 </div>
               </motion.div>

@@ -7,18 +7,18 @@ function CharactersBanner(props) {
 
   return (
     <div
-      className="bg-center bg-no-repeat sm:bg-cover lg:bg-contain"
+      className="bg-contain bg-center bg-no-repeat max-md:bg-cover"
       style={{ backgroundImage: `url("${props.character.banner}")` }}
     >
-      <div className="flex justify-around bg-black bg-opacity-70">
+      <div className="flex justify-around bg-black bg-opacity-70 ">
         {props.right ? (
           <MotionConfig
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5 }}
             initial={{ opacity: 0 }}
           >
-            <motion.div initial={{ x: -200 }} className="mt-7 w-2/4">
-              <div className="mb-20">
+            <motion.div initial={{ x: -200 }} className="mt-7 w-2/4 ">
+              <div className="mb-20 ">
                 <h2 className="mb-0 text-5xl">{`"${props.character.name}"`}</h2>
                 <p>&nbsp;&nbsp;-{props.character.alias}</p>
               </div>

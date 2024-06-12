@@ -1,7 +1,7 @@
 import { AnimatePresence, easeInOut, motion } from "framer-motion";
 import { useState } from "react";
 import Gallery from "../../Components/Gallery/Gallery.jsx";
-import Nav from "../../Components/Nav/Nav.jsx";
+import NewNav from "../../Components/Nav/NewNav.jsx";
 import image1 from "../../images/characters/jonsnow/image1.webp";
 import image2 from "../../images/characters/jonsnow/image2.webp";
 import image3 from "../../images/characters/jonsnow/image3.webp";
@@ -40,7 +40,7 @@ const JonSnow = () => {
 
   return (
     <>
-      <Nav></Nav>
+      <NewNav></NewNav>
       <main className="flex justify-evenly bg-[url('./images/patron3.jpg')] bg-fixed pt-10">
         {/* GLOSARIO DE LINKS */}
         <div
