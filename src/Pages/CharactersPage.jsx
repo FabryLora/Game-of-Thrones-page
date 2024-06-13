@@ -1,11 +1,11 @@
 import Characters from "../Components/Characters/Characters.jsx";
 import Footer from "../Components/Footer/Footer.jsx";
-import NewNav from "../Components/Nav/NewNav.jsx";
+import NavCharactersResponsive from "../Components/Nav/NavCharactersResponsive.jsx";
 
 function CharactersPage() {
   return (
     <>
-      <NewNav></NewNav>
+      <NavCharactersResponsive></NavCharactersResponsive>
       <Characters></Characters>
       <Footer></Footer>
     </>

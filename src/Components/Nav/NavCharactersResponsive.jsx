@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import bars from "../../images/icons/bars-solid.svg";
-import NavHome from "./NavHome";
+import bars from "../../images/icons/bars-solid-black.svg";
 import NavHomeSmall from "./NavHomeSmall";
+import NewNav from "./NewNav.jsx";
 
-function ResponsiveNav() {
+function NavCharactersResponsive() {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 600);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ function ResponsiveNav() {
     };
   }, []);
 
-  return isSmallScreen ? <NavHomeSmall barsImage={bars} /> : <NavHome />;
+  return isSmallScreen ? <NavHomeSmall barsImage={bars} /> : <NewNav />;
 }
 
-export default ResponsiveNav;
+export default NavCharactersResponsive;
