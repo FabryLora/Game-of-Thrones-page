@@ -51,7 +51,7 @@ const Gallery = ({ images }) => {
 };
 
 Gallery.propTypes = {
-  images: PropTypes.string,
+  images: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Gallery;

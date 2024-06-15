@@ -1,7 +1,6 @@
-import { AnimatePresence, easeInOut, motion } from "framer-motion";
-import { useState } from "react";
+import * as char from "../../Components/Characters/CharactersObject.jsx";
 import Gallery from "../../Components/Gallery/Gallery.jsx";
-import NewNav from "../../Components/Nav/NewNav.jsx";
+import NavCharactersResponsive from "../../Components/Nav/NavCharactersResponsive.jsx";
 import image1 from "../../images/characters/jonsnow/image1.webp";
 import image2 from "../../images/characters/jonsnow/image2.webp";
 import image3 from "../../images/characters/jonsnow/image3.webp";
@@ -10,8 +9,8 @@ import image5 from "../../images/characters/jonsnow/image5.webp";
 import image6 from "../../images/characters/jonsnow/image6.webp";
 import image7 from "../../images/characters/jonsnow/image7.webp";
 import image8 from "../../images/characters/jonsnow/image8.webp";
-import exampleImage from "../../images/characters/jonsnowpng3.png";
-import chevron from "../../images/icons/chevron-down-solid.svg";
+import whiteBars from "../../images/icons/bars-solid.svg";
+import CharacterDesc from "../CharacterDesc.jsx";
 
 const JonSnow = () => {
   const images = [
@@ -32,19 +31,16 @@ const JonSnow = () => {
     }
   };
 
-  const [isOpen, setIsOpen] = useState(true);
-
-  const toggleInformation = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <>
-      <NewNav></NewNav>
-      <main className="flex justify-evenly bg-[url('./images/patron3.jpg')] bg-fixed pt-10">
+      <NavCharactersResponsive
+        aditionalStyles={"max-md:bg-black max-md:rounded"}
+        barsImage={whiteBars}
+      ></NavCharactersResponsive>
+      <main className="flex justify-evenly bg-[url('./images/patron3.jpg')] bg-fixed pt-10 max-md:flex-col max-md:items-center max-md:pt-28">
         {/* GLOSARIO DE LINKS */}
         <div
-          className="sticky top-2 h-fit w-[15%] rounded-3xl bg-gray-700 p-5 shadow-2xl"
+          className="sticky top-2 h-fit w-[15%] rounded-3xl bg-gray-700 p-5 shadow-2xl max-md:hidden"
           id="glosario content"
         >
           <ul className="flex flex-col items-start gap-1">
@@ -82,7 +78,7 @@ const JonSnow = () => {
         </div>
 
         {/* CONTENIDO PRINCIPAL DEL PERSONAJE */}
-        <div className="flex h-full w-[55%] flex-col rounded-3xl bg-gray-700 p-4 shadow-2xl">
+        <div className="flex h-full w-[55%] flex-col rounded-3xl bg-gray-700 p-4 shadow-2xl max-md:order-2 max-md:mt-5 max-md:w-[90%]">
           {/* INTRO */}
           <div className="mb-10">
             <h1 id="intro" className="mb-5 text-4xl">
@@ -225,105 +221,7 @@ const JonSnow = () => {
         </div>
 
         {/* DESCRIPCION LATERAL DERECHA DEL PERSONAJE: A;OS, FAMILIA, ETC */}
-        <motion.div
-          className="flex h-fit w-[20%] flex-col justify-start rounded-3xl bg-gray-700 shadow-2xl"
-          id="personaje info"
-        >
-          <div className="border-b-2 pt-3 text-center text-5xl">
-            <h2 className="">Jon Snow</h2>
-            <img src={exampleImage} className="m-auto" width={200} alt="" />
-          </div>
-          {/* Informacion personal del personaje */}
-          <div className="flex items-center justify-center gap-2 py-2">
-            <button onClick={toggleInformation} className="text-lg">
-              Informacion Personal
-            </button>
-            <motion.button
-              initial={{ rotate: "0deg" }}
-              animate={{ rotate: isOpen ? "0deg" : "180deg" }}
-              transition={{
-                duration: 0.25,
-                damping: easeInOut,
-              }}
-            >
-              <img src={chevron} width={20} alt="" />
-            </motion.button>
-          </div>
-
-          <AnimatePresence>
-            {isOpen && (
-              <div>
-                <div className="p-4">
-                  <ul>
-                    <li className="my-4 flex gap-2">
-                      <h3 className="font-bold">Name:</h3>Jon Snow
-                    </li>
-
-                    <li className="my-4">
-                      <h3 className="font-bold">Familia:</h3>
-                      <ul className="pl-10">
-                        <li>
-                          <p>Rhaegar Targaryen - Padre</p>
-                        </li>
-                        <li>
-                          <p>Lyanna Stark - Madre</p>
-                        </li>
-                        <li>
-                          <p>Viserys Targaryen - Tío</p>
-                        </li>
-                        <li>
-                          <p>Daenerys Targaryen - Tía</p>
-                        </li>
-                        <li>
-                          <p>Brandon Stark - Tío</p>
-                        </li>
-                        <li>
-                          <p>Eddard Stark - Tío</p>
-                        </li>
-                        <li>
-                          <p>Benjen Stark - Tío</p>
-                        </li>
-                        <li>
-                          <p>Robb Stark - Primo</p>
-                        </li>
-                        <li>
-                          <p>Sansa Stark - Prima</p>
-                        </li>
-                        <li>
-                          <p>Arya Stark - Prima</p>
-                        </li>
-                        <li>
-                          <p>Brandon Stark - Primo</p>
-                        </li>
-                        <li>
-                          <p>Rickon Stark - Primo</p>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li className="my-4">
-                      <h3 className="font-bold">Filiacion:</h3>
-                      <ul className="pl-10">
-                        <li>Casa Stark</li>
-                        <li>Casa Targaryen</li>
-                      </ul>
-                    </li>
-
-                    <li className="my-4">
-                      <h3 className="font-bold">Alias:</h3>
-                      <ul className="pl-10">
-                        <li>Lord Nieve</li>
-                        <li>El Bastardo de invernalia</li>
-                        <li>Rey Cuervo</li>
-                        <li>El Lobo Blanco</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            )}
-          </AnimatePresence>
-        </motion.div>
+        <CharacterDesc char={char.jonSnow} />
       </main>
     </>
   );

@@ -14,42 +14,47 @@ import EddardStark from "./Pages/Characters/EddardStark.jsx";
 import JonSnow from "./Pages/Characters/JonSnow.jsx";
 import SansaStark from "./Pages/Characters/SansaStark.jsx";
 import CharactersPage from "./Pages/CharactersPage.jsx";
+import MakingOf from "./Pages/MakingOf.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
   {
-    path: "characters",
+    path: "/characters",
     element: <CharactersPage />,
   },
   {
-    path: "jonsnow",
+    path: "/characters/jonsnow",
     element: <JonSnow />,
   },
   {
-    path: "eddardstark",
+    path: "/characters/eddardstark",
     element: <EddardStark />,
   },
   {
-    path: "aryastark",
+    path: "/characters/aryastark",
     element: <AryaStark />,
   },
   {
-    path: "sansastark",
+    path: "/characters/sansastark",
     element: <SansaStark />,
   },
   {
-    path: "branstark",
+    path: "/characters/branstark",
     element: <BranStark />,
   },
   {
-    path: "daenerystargaryen",
+    path: "/characters/daenerystargaryen",
     element: <DaenerysTargaryen />,
   },
   {
-    path: "rhaegartargaryen",
+    path: "/characters/rhaegartargaryen",
     element: <RhaegarTargaryen />,
+  },
+  {
+    path: "/makingof",
+    element: <MakingOf />,
   },
 ]);
 

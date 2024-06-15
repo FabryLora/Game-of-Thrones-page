@@ -1,9 +1,13 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import bars from "../../images/icons/bars-solid-black.svg";
 import NavHomeSmall from "./NavHomeSmall";
 import NewNav from "./NewNav.jsx";
 
-function NavCharactersResponsive() {
+function NavCharactersResponsive({
+  barsImage,
+  aditionalStyles,
+  aditionalStylesNew,
+}) {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 600);
 
   useEffect(() => {
@@ -17,7 +21,16 @@ function NavCharactersResponsive() {
     };
   }, []);
 
-  return isSmallScreen ? <NavHomeSmall barsImage={bars} /> : <NewNav />;
+  return isSmallScreen ? (
+    <NavHomeSmall aditionalStyles={aditionalStyles} barsImage={barsImage} />
+  ) : (
+    <NewNav aditionalStyles={aditionalStylesNew} />
+  );
 }
+
+NavCharactersResponsive.propTypes = {
+  barsImage: PropTypes.string,
+  aditionalStyles: PropTypes.string,
+};
 
 export default NavCharactersResponsive;

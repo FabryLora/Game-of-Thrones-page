@@ -7,7 +7,7 @@ function CharacterBannerSmall({ character }) {
 
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat"
+      className=" bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${character.banner})` }}
     >
       <div className="flex h-fit w-full flex-col items-center bg-[rgba(0,0,0,0.7)]">
@@ -17,6 +17,7 @@ function CharacterBannerSmall({ character }) {
         </div>
         <AnimatedLink to={character.characterLink}>
           <motion.img
+            className="max-h-[520px] snap-start"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}

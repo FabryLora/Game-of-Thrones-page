@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logos/gotlogopng2.png";
 
 const starkCharacters = [
-  { name: "Jon Snow", href: "/jonsnow" },
-  { name: "Arya", href: "/aryastark" },
-  { name: "Sansa", href: "/sansastark" },
-  { name: "Eddard", href: "/eddardstark" },
-  { name: "Bran", href: "/branstark" },
+  { name: "Jon Snow", href: "/characters/jonsnow" },
+  { name: "Arya", href: "/characters/aryastark" },
+  { name: "Sansa", href: "/characters/sansastark" },
+  { name: "Eddard", href: "/characters/eddardstark" },
+  { name: "Bran", href: "/characters/branstark" },
 ];
 
 const targaryenCharacters = [
-  { name: "Daenerys", href: "/daenerystargaryen" },
-  { name: "Rhaegar", href: "/rhaegartargaryen" },
+  { name: "Daenerys", href: "characters/daenerystargaryen" },
+  { name: "Rhaegar", href: "characters/rhaegartargaryen" },
 ];
 
-const NewNav = () => {
+const NewNav = ({ aditionalStyles }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const control1 = useAnimation();
@@ -25,7 +25,7 @@ const NewNav = () => {
   const control4 = useAnimation();
 
   return (
-    <nav className="flex gap-3 p-2">
+    <nav className={`flex gap-3 p-2 ${aditionalStyles}`}>
       <Link to={"/"}>
         <img src={logo} width={50} alt="" />
       </Link>
@@ -114,9 +114,9 @@ const NewNav = () => {
           <Link
             onMouseEnter={() => control3.start({ scaleX: 1 })}
             onMouseLeave={() => control3.start({ scaleX: 0 })}
-            to={"/"}
+            to={"/makingof"}
           >
-            Making off
+            Making of GOT
           </Link>
           <motion.div
             initial={{ scaleX: 0 }}

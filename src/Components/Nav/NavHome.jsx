@@ -12,6 +12,19 @@ function NavHome() {
   const controls = useAnimation();
   const controls2 = useAnimation();
 
+  const starkCharacters = [
+    { name: "Jon Snow", href: "/characters/jonsnow" },
+    { name: "Arya", href: "/characters/aryastark" },
+    { name: "Sansa", href: "/characters/sansastark" },
+    { name: "Eddard", href: "/characters/eddardstark" },
+    { name: "Bran", href: "/characters/branstark" },
+  ];
+
+  const TargaryenCharacters = [
+    { name: "Daenerys", href: "/characters/daenerystargaryen" },
+    { name: "Rhaegar", href: "/characters/rhaegartargaryen" },
+  ];
+
   return (
     <header className="absolute w-full">
       <nav className="flex items-center justify-evenly text-lg">
@@ -67,35 +80,26 @@ function NavHome() {
                   <div>
                     <h2 className="font-bold">Stark:</h2>
                     <ul>
-                      <li>
-                        <Link className="hover:text-slate-400" to={"jonsnow"}>
-                          Jon Snow
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="hover:text-slate-400">Arya</Link>
-                      </li>
-                      <li>
-                        <Link className="hover:text-slate-400">Sansa</Link>
-                      </li>
-                      <li>
-                        <Link className="hover:text-slate-400">Eddard</Link>
-                      </li>
-                      <li>
-                        <Link className="hover:text-slate-400">Bran</Link>
-                      </li>
+                      {starkCharacters.map((elem) => (
+                        <li key={elem.name}>
+                          <Link className="hover:text-slate-400" to={elem.href}>
+                            {elem.name}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
                   <div className="border-l-2 pl-4">
                     <h2 className="font-bold">Targaryen:</h2>
                     <ul>
-                      <li>
-                        <Link className="hover:text-slate-400">Denerys</Link>
-                      </li>
-                      <li>
-                        <Link className="hover:text-slate-400">Rhaegar</Link>
-                      </li>
+                      {TargaryenCharacters.map((elem) => (
+                        <li key={elem.name}>
+                          <Link className="hover:text-slate-400" to={elem.href}>
+                            {elem.name}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </motion.div>
@@ -109,7 +113,7 @@ function NavHome() {
         </Link>
 
         <ul className="flex w-1/4 justify-evenly max-md:hidden">
-          <Link to={"/"}>Nidea</Link>
+          <Link to={"/makingof"}>Making Of GOT</Link>
           <Link to={"/"}>LoLos</Link>
         </ul>
       </nav>

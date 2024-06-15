@@ -5,21 +5,21 @@ import { Link } from "react-router-dom";
 import chevron from "../../images/icons/chevron-down-solid.svg";
 import logo from "../../images/logos/gameofthroneslogo.png";
 const characters = [
-  { name: "Jon Snow", href: "/jonsnow" },
-  { name: "Arya", href: "/aryastark" },
-  { name: "Sansa", href: "/sansastark" },
-  { name: "Eddard", href: "/eddardstark" },
-  { name: "Bran", href: "/branstark" },
-  { name: "Daenerys", href: "/daenerystargaryen" },
-  { name: "Rhaegar", href: "/rhaegartargaryen" },
+  { name: "Jon Snow", href: "/characters/jonsnow" },
+  { name: "Arya Stark", href: "/characters/aryastark" },
+  { name: "Sansa Stark", href: "/characters/sansastark" },
+  { name: "Eddard Stark", href: "/characters/eddardstark" },
+  { name: "Bran Stark", href: "/characters/branstark" },
+  { name: "Daenerys Targaryen", href: "/characters/daenerystargaryen" },
+  { name: "Rhaegar Targaryen", href: "/characters/rhaegartargaryen" },
 ];
 
-function NavHomeSmall({ barsImage }) {
+function NavHomeSmall({ barsImage, aditionalStyles }) {
   const [subIsOpen, setSubIsOpen] = useState(false);
   const [navIsOpen, setNavIsOpen] = useState(false);
 
   return (
-    <header className="absolute w-full">
+    <header className={`absolute w-full ${aditionalStyles}`}>
       <nav className="flex items-center justify-evenly text-lg">
         <button onClick={() => setNavIsOpen(!navIsOpen)} className="h-4 w-4">
           <img src={barsImage} alt="" />
@@ -61,7 +61,7 @@ function NavHomeSmall({ barsImage }) {
                     )}
                   </AnimatePresence>
                 </div>
-                <Link>Page3</Link>
+                <Link to={"/makingof"}>Making of GOT</Link>
                 <Link>Page4</Link>
               </ul>
             </motion.div>
@@ -83,6 +83,7 @@ function NavHomeSmall({ barsImage }) {
 
 NavHomeSmall.propTypes = {
   barsImage: PropTypes.string,
+  aditionalStyles: PropTypes.string,
 };
 
 export default NavHomeSmall;
