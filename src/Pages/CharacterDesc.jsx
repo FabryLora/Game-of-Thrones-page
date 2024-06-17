@@ -11,8 +11,8 @@ const CharacterDesc = ({ char }) => {
       className="flex h-fit w-[20%] flex-col justify-start rounded-3xl bg-gray-700 shadow-2xl max-md:order-1 max-md:w-[90%]"
       id="personaje info"
     >
-      <div className="border-b-2 pt-3 text-center text-5xl">
-        <h2 className="">{char.name}</h2>
+      <div className="border-b-2 p-3 pb-0 text-center text-5xl">
+        <h2 className="font-cinzel">{char.name}</h2>
         <img src={char.image} className="m-auto max-w-[300px]" alt="" />
       </div>
       {/* Informacion personal del personaje */}

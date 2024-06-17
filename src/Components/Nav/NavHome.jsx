@@ -11,6 +11,8 @@ function NavHome() {
 
   const controls = useAnimation();
   const controls2 = useAnimation();
+  const controls3 = useAnimation();
+  const controls4 = useAnimation();
 
   const starkCharacters = [
     { name: "Jon Snow", href: "/characters/jonsnow" },
@@ -113,8 +115,36 @@ function NavHome() {
         </Link>
 
         <ul className="flex w-1/4 justify-evenly max-md:hidden">
-          <Link to={"/makingof"}>Making Of GOT</Link>
-          <Link to={"/"}>LoLos</Link>
+          <div className="flex flex-col">
+            <AnimatedLink
+              onMouseEnter={() => controls3.start({ scaleX: 1 })}
+              onMouseLeave={() => controls3.start({ scaleX: 0 })}
+              to={"makingof"}
+            >
+              Making Of GOT
+            </AnimatedLink>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={controls3}
+              transition={{ duration: 0.2 }}
+              className=" h-1 w-full rounded-md bg-white"
+            ></motion.div>
+          </div>
+          <div className="flex flex-col">
+            <AnimatedLink
+              onMouseEnter={() => controls4.start({ scaleX: 1 })}
+              onMouseLeave={() => controls4.start({ scaleX: 0 })}
+              to={"/"}
+            >
+              Valoraciones
+            </AnimatedLink>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={controls4}
+              transition={{ duration: 0.2 }}
+              className=" h-1 w-full rounded-md bg-white"
+            ></motion.div>
+          </div>
         </ul>
       </nav>
     </header>

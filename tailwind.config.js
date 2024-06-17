@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         lora: ["Lora", "serif"],
         cinzel: ["Cinzel", "serif"],
+        gothic: ["Nanum Gothic", "sans-serif"],
       },
     },
   },

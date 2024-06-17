@@ -1,4 +1,5 @@
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logos/gotlogopng2.png";
@@ -12,8 +13,8 @@ const starkCharacters = [
 ];
 
 const targaryenCharacters = [
-  { name: "Daenerys", href: "characters/daenerystargaryen" },
-  { name: "Rhaegar", href: "characters/rhaegartargaryen" },
+  { name: "Daenerys", href: "/characters/daenerystargaryen" },
+  { name: "Rhaegar", href: "/characters/rhaegartargaryen" },
 ];
 
 const NewNav = ({ aditionalStyles }) => {
@@ -129,9 +130,9 @@ const NewNav = ({ aditionalStyles }) => {
           <Link
             onMouseEnter={() => control4.start({ scaleX: 1 })}
             onMouseLeave={() => control4.start({ scaleX: 0 })}
-            to={"/"}
+            to={"/valoraciones"}
           >
-            Family tree
+            Valoraciones
           </Link>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -143,6 +144,10 @@ const NewNav = ({ aditionalStyles }) => {
       </ul>
     </nav>
   );
+};
+
+NewNav.propTypes = {
+  aditionalStyles: PropTypes.string,
 };
 
 export default NewNav;

@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import charactesImage from "../../images/characters.jpg";
-import familyTreeImage from "../../images/familytreeextended.webp";
 import homeImage from "../../images/homeimage.jpg";
 import secondSectionImage from "../../images/jonsnow.jpg";
-/* import logo from "../../images/logos/gameofthroneslogo.png"; */
-import makingOffImage from "../../images/mackingoff.webp";
+import makingOf from "../../images/makingof2.jpg";
+import valoraciones from "../../images/valoraciones.jpg";
 
 function Home() {
   const AnimatedLink = motion(Link);
@@ -48,7 +47,7 @@ function Home() {
             <AnimatedLink whileHover={{ scale: 1.1 }} to={"/"}>
               <img
                 className="max-h-72 rounded-xl"
-                src={familyTreeImage}
+                src={charactesImage}
                 alt="arbol familiar"
               />
             </AnimatedLink>
@@ -86,7 +85,7 @@ function Home() {
             >
               <img
                 className="max-h-72 rounded-xl"
-                src={charactesImage}
+                src={makingOf}
                 alt="5 de los personajes de la serie"
               />
             </AnimatedLink>
@@ -96,7 +95,7 @@ function Home() {
             <AnimatedLink whileHover={{ scale: 1.1 }} to={"/"}>
               <img
                 className="max-h-72 rounded-xl"
-                src={makingOffImage}
+                src={valoraciones}
                 alt="foto del macking off"
               />
             </AnimatedLink>

@@ -73,8 +73,8 @@ function NavHomeSmall({ barsImage, aditionalStyles }) {
         </Link>
 
         <ul className="flex w-1/4 justify-evenly max-md:hidden">
-          <Link to={"/"}>Nidea</Link>
-          <Link to={"/"}>LoLos</Link>
+          <Link to={"/makingof"}>Making of GOT</Link>
+          <Link to={"/valoraciones"}>Valoraciones</Link>
         </ul>
       </nav>
     </header>

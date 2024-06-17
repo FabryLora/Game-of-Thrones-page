@@ -4,15 +4,12 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
-import AryaStark from "./Pages/Characters/AryaStark.jsx";
-import BranStark from "./Pages/Characters/BranStark.jsx";
-import {
-  default as DaenerysTargaryen,
-  default as RhaegarTargaryen,
-} from "./Pages/Characters/DaenerysTargaryen.jsx";
-import EddardStark from "./Pages/Characters/EddardStark.jsx";
-import JonSnow from "./Pages/Characters/JonSnow.jsx";
-import SansaStark from "./Pages/Characters/SansaStark.jsx";
+import AryaStark from "./Pages/Characters/AryaStark/AryaStark.jsx";
+import BranStark from "./Pages/Characters/BranStark/BranStark.jsx";
+import DaenerysTargaryen from "./Pages/Characters/DaenerysTargaryen/DaenerysTargaryen.jsx";
+import EddardStark from "./Pages/Characters/EddardStark/EddardStark.jsx";
+import JonSnow from "./Pages/Characters/jonSnow/JonSnow.jsx";
+import SansaStark from "./Pages/Characters/SansaStark/SansaStark.jsx";
 import CharactersPage from "./Pages/CharactersPage.jsx";
 import MakingOf from "./Pages/MakingOf.jsx";
 const router = createBrowserRouter([
@@ -48,10 +45,10 @@ const router = createBrowserRouter([
     path: "/characters/daenerystargaryen",
     element: <DaenerysTargaryen />,
   },
-  {
+  /* {
     path: "/characters/rhaegartargaryen",
     element: <RhaegarTargaryen />,
-  },
+  }, */
   {
     path: "/makingof",
     element: <MakingOf />,
