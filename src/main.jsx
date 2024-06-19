@@ -12,6 +12,7 @@ import JonSnow from "./Pages/Characters/jonSnow/JonSnow.jsx";
 import SansaStark from "./Pages/Characters/SansaStark/SansaStark.jsx";
 import CharactersPage from "./Pages/CharactersPage.jsx";
 import MakingOf from "./Pages/MakingOf.jsx";
+import Valoraciones from "./Pages/Valoraciones.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: "/makingof",
     element: <MakingOf />,
+  },
+  {
+    path: "/valoraciones",
+    element: <Valoraciones />,
   },
 ]);
 

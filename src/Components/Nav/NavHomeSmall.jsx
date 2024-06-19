@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { easeInOut } from "framer-motion/dom";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -17,6 +18,7 @@ const characters = [
 function NavHomeSmall({ barsImage, aditionalStyles }) {
   const [subIsOpen, setSubIsOpen] = useState(false);
   const [navIsOpen, setNavIsOpen] = useState(false);
+  const [rota, setRota] = useState(false);
 
   return (
     <header className={`absolute w-full ${aditionalStyles}`}>
@@ -32,7 +34,7 @@ function NavHomeSmall({ barsImage, aditionalStyles }) {
               exit={{ y: -20, opacity: 0 }}
               className="absolute top-[100%] h-fit w-[95%] rounded-md bg-black"
             >
-              <ul className="flex flex-col p-4">
+              <ul className="flex flex-col gap-3 p-4">
                 <Link to={"/"}>Home</Link>
                 <div className="flex flex-col justify-between">
                   <div className="flex items-center justify-between">
@@ -41,7 +43,14 @@ function NavHomeSmall({ barsImage, aditionalStyles }) {
                       onClick={() => setSubIsOpen(!subIsOpen)}
                       className="h-3 w-3 justify-self-end"
                     >
-                      <img src={chevron} alt="" />
+                      <motion.img
+                        initial={{ rotateZ: "0deg" }}
+                        animate={{ rotateZ: rota ? "180deg" : "0deg" }}
+                        transition={{ type: easeInOut }}
+                        onClick={() => setRota(!rota)}
+                        src={chevron}
+                        alt=""
+                      />
                     </button>
                   </div>
                   <AnimatePresence>
@@ -50,7 +59,7 @@ function NavHomeSmall({ barsImage, aditionalStyles }) {
                         initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -20, opacity: 0 }}
-                        className="my-3 flex flex-col border-y-2"
+                        className="my-3 flex flex-col gap-4 border-y-2 py-4"
                       >
                         {characters.map((items) => (
                           <Link key={items.name} to={items.href}>
@@ -62,7 +71,7 @@ function NavHomeSmall({ barsImage, aditionalStyles }) {
                   </AnimatePresence>
                 </div>
                 <Link to={"/makingof"}>Making of GOT</Link>
-                <Link>Page4</Link>
+                <Link to={"/valoraciones"}>Valoraciones</Link>
               </ul>
             </motion.div>
           )}

@@ -44,7 +44,7 @@ function Home() {
       >
         <div className="flex w-full flex-col items-center justify-center bg-[rgba(0,0,0,0.5)]">
           <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl max-md:w-[90%] max-md:flex-col max-md:bg-[rgba(0,0,0,0.7)] max-md:p-3">
-            <AnimatedLink whileHover={{ scale: 1.1 }} to={"/"}>
+            <AnimatedLink whileHover={{ scale: 1.1 }} to={"/characters"}>
               <img
                 className="max-h-72 rounded-xl"
                 src={charactesImage}
@@ -53,12 +53,15 @@ function Home() {
             </AnimatedLink>
             <div className="flex w-2/4 flex-col max-md:mt-3 max-md:w-full max-md:items-center">
               <p className="w-full">
-                Mira el arbol genialogico y enterate de todos los vinculos entre
-                personajes para entender mas a profundidad la historia
+                En esta sección se muestran los personajes icónicos de Game of
+                Thrones, con detalles sobre sus características, historias y
+                roles dentro de la serie. Explora las complejidades de cada
+                personaje, desde los nobles hasta los guerreros, y descubre cómo
+                sus destinos se entrelazan en la lucha por el Trono de Hierro.
               </p>
               <Link
-                className="w-24 rounded-xl border border-solid border-white bg-none p-2 text-center font-bold text-white hover:bg-white hover:text-black"
-                to={"/"}
+                className="mt-5 w-24 rounded-xl border border-solid border-white bg-none p-2 text-center font-bold text-white hover:bg-white hover:text-black"
+                to={"/characters"}
               >
                 Ver mas
               </Link>
@@ -68,12 +71,16 @@ function Home() {
           <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl max-md:w-[90%] max-md:flex-col max-md:bg-[rgba(0,0,0,0.7)] max-md:p-3">
             <div className="flex w-2/4 flex-col max-md:order-2 max-md:mt-3 max-md:w-full max-md:items-center">
               <p className="w-full">
-                Mira el arbol genialogico y enterate de todos los vinculos entre
-                personajes para entender mas a profundidad la historia
+                Adéntrate en el fascinante detrás de escena de Game of Thrones.
+                En esta sección, conocerás cómo se creó la música épica, los
+                elaborados trajes y los impresionantes efectos especiales que
+                dieron vida a Westeros. Descubre entrevistas exclusivas, videos
+                y anécdotas del equipo de producción que hizo posible esta
+                aclamada serie.
               </p>
               <Link
-                className="w-24 rounded-xl border border-solid border-white bg-none p-2 text-center font-bold text-white hover:bg-white hover:text-black"
-                to={"/"}
+                className="mt-5 w-24 rounded-xl border border-solid border-white bg-none p-2 text-center font-bold text-white hover:bg-white hover:text-black"
+                to={"/makingof"}
               >
                 Ver mas
               </Link>
@@ -81,7 +88,7 @@ function Home() {
             <AnimatedLink
               className="max-md:order-1"
               whileHover={{ scale: 1.1 }}
-              to={"characters"}
+              to={"/makingof"}
             >
               <img
                 className="max-h-72 rounded-xl"
@@ -92,7 +99,7 @@ function Home() {
           </div>
 
           <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl max-md:w-[90%] max-md:flex-col max-md:bg-[rgba(0,0,0,0.7)] max-md:p-3">
-            <AnimatedLink whileHover={{ scale: 1.1 }} to={"/"}>
+            <AnimatedLink whileHover={{ scale: 1.1 }} to={"/valoraciones"}>
               <img
                 className="max-h-72 rounded-xl"
                 src={valoraciones}
@@ -101,12 +108,16 @@ function Home() {
             </AnimatedLink>
             <div className="flex w-2/4 flex-col max-md:mt-3 max-md:w-full max-md:items-center">
               <p className="w-full">
-                Mira el arbol genialogico y enterate de todos los vinculos entre
-                personajes para entender mas a profundidad la historia
+                Aquí, los fans de Game of Thrones pueden dejar sus opiniones y
+                comentarios sobre la serie. Comparte tus pensamientos sobre los
+                episodios, personajes y momentos favoritos, y lee lo que otros
+                seguidores tienen que decir. Únete a la conversación y forma
+                parte de la comunidad de admiradores de una de las series más
+                influyentes de la televisión.
               </p>
               <Link
-                className="w-24 rounded-xl border border-solid border-white bg-none p-2 text-center font-bold text-white hover:bg-white hover:text-black"
-                to={"/"}
+                className="mt-5 w-24 rounded-xl border border-solid border-white bg-none p-2 text-center font-bold text-white hover:bg-white hover:text-black"
+                to={"/valoraciones"}
               >
                 Ver mas
               </Link>

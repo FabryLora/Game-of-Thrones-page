@@ -61,13 +61,43 @@ function Characters() {
       </div>
       {isSmallScreen ? (
         <>
+          <div
+            ref={starkRef}
+            className="h-[200px] bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${initialBanner})` }}
+          >
+            <div className="flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.7)]">
+              <h2 className="text-4xl">Casa Stark</h2>
+            </div>
+          </div>
           <CharacterBannerSmall character={objects.jonSnow} />
           <CharacterBannerSmall character={objects.eddardStark} />
           <CharacterBannerSmall character={objects.branStark} />
           <CharacterBannerSmall character={objects.sansaStark} />
           <CharacterBannerSmall character={objects.ariaStark} />
+          <div
+            ref={targaRef}
+            className="h-[200px] bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${initialTargaryen})` }}
+          >
+            <div className="flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.7)]">
+              <h2 className="text-4xl">Casa Targaryen</h2>
+            </div>
+          </div>
           <CharacterBannerSmall character={objects.daenerys} />
           <CharacterBannerSmall character={objects.rhaegarTargaryen} />
+          <div
+            ref={lanRef}
+            className="h-[200px] bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${lannisterInitialBanner})` }}
+          >
+            <div className="flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.7)]">
+              <h2 className="text-4xl">Casa Lannister</h2>
+            </div>
+          </div>
+          <CharacterBannerSmall character={objects.tyrionLannister} />
+          <CharacterBannerSmall character={objects.cerseiLannister} />
+          <CharacterBannerSmall character={objects.jaimeLannister} />
         </>
       ) : (
         <>

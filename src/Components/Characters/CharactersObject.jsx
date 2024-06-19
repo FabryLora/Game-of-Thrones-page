@@ -194,7 +194,7 @@ const jaimeLannister = {
 };
 
 const cerseiLannister = {
-  name: "Jaime Lannister",
+  name: "Cersei Lannister",
   alias: "Reina Regente",
   desc: "Cersei Lannister es la hija mayor de Tywin Lannister y la hermana gemela de Jaime. Es ambiciosa, manipuladora y decidida a mantener y aumentar el poder de su familia. A lo largo de la serie, Cersei muestra una habilidad para la intriga política y un deseo implacable de proteger a sus hijos y su posición en el trono. Su relación incestuosa con Jaime y su odio hacia Tyrion son elementos centrales de su personaje.",
   image: cerseiImage,
