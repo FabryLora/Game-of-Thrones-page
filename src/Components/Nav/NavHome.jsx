@@ -37,7 +37,7 @@ function NavHome() {
               onMouseLeave={() => controls.start({ scaleX: 0 })}
               to={"/"}
             >
-              Home
+              Inicio
             </AnimatedLink>
             <motion.div
               initial={{ scaleX: 0 }}
@@ -57,7 +57,7 @@ function NavHome() {
               }
               to={"characters"}
             >
-              Characters
+              Personajes
             </Link>
             <motion.div
               initial={{ scaleX: 0 }}
@@ -134,7 +134,7 @@ function NavHome() {
             <AnimatedLink
               onMouseEnter={() => controls4.start({ scaleX: 1 })}
               onMouseLeave={() => controls4.start({ scaleX: 0 })}
-              to={"/"}
+              to={"/valoraciones"}
             >
               Valoraciones
             </AnimatedLink>

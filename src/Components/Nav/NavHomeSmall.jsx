@@ -35,7 +35,7 @@ function NavHomeSmall({ barsImage, aditionalStyles }) {
               className="absolute top-[100%] h-fit w-[95%] rounded-md bg-black"
             >
               <ul className="flex flex-col gap-3 p-4">
-                <Link to={"/"}>Home</Link>
+                <Link to={"/"}>Inicio</Link>
                 <div className="flex flex-col justify-between">
                   <div className="flex items-center justify-between">
                     <Link to={"/characters"}>Personajes</Link>
