@@ -21,10 +21,10 @@ function MakingOf() {
         ></NavCharactersResponsive>
         {/* PRESENTACION */}
         <div
-          className="h-screen bg-cover bg-center bg-no-repeat"
+          className="h-screen bg-cover bg-center bg-no-repeat md:max-h-[700px]"
           style={{ backgroundImage: `url(${makingof})` }}
         >
-          <div className="flex h-screen items-center justify-center bg-[rgba(0,0,0,0.7)]">
+          <div className="flex h-screen items-center justify-center bg-[rgba(0,0,0,0.7)] md:max-h-[700px]">
             <div className="flex flex-col items-center">
               <h3 className="text-6xl text-white max-md:text-center max-md:text-5xl">
                 Making of Game of Thrones

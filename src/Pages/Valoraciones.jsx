@@ -13,10 +13,10 @@ function Valoraciones() {
       <NavCharactersResponsive barsImage={bars} />
       <main>
         <div
-          className="h-screen bg-cover bg-center bg-no-repeat"
+          className="h-screen bg-cover bg-center bg-no-repeat md:max-h-[700px]"
           style={{ backgroundImage: `url(${valorImage})` }}
         >
-          <div className="flex h-screen items-center justify-center bg-[rgba(0,0,0,0.5)]">
+          <div className="flex h-screen items-center justify-center bg-[rgba(0,0,0,0.5)] md:max-h-[700px]">
             <h2 className="text-5xl">Valoraciones</h2>
           </div>
         </div>
@@ -58,6 +58,7 @@ function Valoraciones() {
 
           <div className="flex w-1/2 flex-col justify-center gap-1 p-4 shadow-2xl max-md:w-[90%]">
             <h2 className="text-2xl">Laura Fernández</h2>
+
             <Rating name="read-only" value={2} readOnly />
             <p>
               Tenía grandes expectativas con Game of Thrones, pero me decepcionó
@@ -66,35 +67,38 @@ function Valoraciones() {
               tuvieron el desarrollo que merecían.
             </p>
           </div>
-
-          <h2 className="text-3xl max-md:text-2xl">
-            Queremos saber lo que pensas!
-          </h2>
         </div>
 
-        <div className="flex items-center justify-center bg-white pb-4 max-md:pt-52">
+        <div className="flex flex-col items-center justify-center bg-white pb-4 max-md:px-5 max-md:pt-56">
+          <h2 className="font-lora text-3xl text-black max-md:text-2xl">
+            ¡Queremos saber lo que pensas!
+          </h2>
+          <p className="pb-10 text-center font-lora text-xl text-black">
+            Deja tu valoracion y dejanos informarte de todo acerca de tu serie
+            favorita
+          </p>
           <form
-            className="flex h-fit w-[40%] flex-col justify-center gap-5 border-b-2 bg-white font-lora text-black max-md:w-[90%]"
+            className="flex h-fit w-full max-w-lg flex-col justify-center gap-5 border-b-2 bg-white font-lora text-black md:w-[70%] lg:w-[40%]"
             action=""
           >
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-4 md:flex-row md:justify-between">
               <input
-                className="rounded-md border-2 border-black p-1"
+                className="w-full rounded-md border-2 border-black p-1 md:w-[48%]"
                 type="text"
-                name="hola"
+                name="nombre"
                 placeholder="Nombre"
                 id=""
               />
               <input
-                className="rounded-md border-2 border-black p-1"
+                className="w-full rounded-md border-2 border-black p-1 md:w-[48%]"
                 type="text"
-                name="hola"
+                name="apellido"
                 placeholder="Apellido"
                 id=""
               />
             </div>
             <div className="text-center">
-              <h2 className="text-xl">Deja tu valoracion</h2>
+              <h2 className="text-xl">Deja tu valoración</h2>
               <Rating
                 name="simple-controlled"
                 value={value}
@@ -103,31 +107,30 @@ function Valoraciones() {
                 }}
               />
             </div>
-
             <input
-              className="rounded-md border-2 border-black p-1"
+              className="w-full rounded-md border-2 border-black p-1"
               type="email"
               placeholder="Email"
               name=""
               id=""
             />
             <textarea
-              className="rounded-md border-2 border-black p-1"
-              placeholder="Escribe tu opinion aqui"
+              className="w-full rounded-md border-2 border-black p-1"
+              placeholder="Escribe tu opinión aquí"
               name=""
               id=""
               rows={8}
             ></textarea>
-            <div className="flex flex-row  gap-2">
+            <div className="flex items-center gap-2">
               <input type="checkbox" name="info" id="info" />
               <label htmlFor="info">
-                Marca esta casilla si quieres recibir informacion de Game of
+                Marca esta casilla si quieres recibir información de Game of
                 Thrones
               </label>
             </div>
             <motion.input
               whileTap={{ scale: 0.9 }}
-              className="rounded-md border-2 border-black py-2"
+              className="w-full rounded-md border-2 border-black py-2"
               type="submit"
               value="Enviar"
             />

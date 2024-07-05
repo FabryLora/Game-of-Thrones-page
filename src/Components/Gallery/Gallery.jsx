@@ -20,7 +20,7 @@ const Gallery = ({ images }) => {
 
   return (
     <>
-      <h2 className="border-b-2 text-2xl font-bold">Galeria</h2>
+      <h2 className="border-b-2 font-cinzel text-2xl font-bold">Galeria</h2>
       <div className="grid grid-cols-1 gap-5 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {images.map((src, index) => (
           <motion.div

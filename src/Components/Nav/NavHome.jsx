@@ -29,7 +29,7 @@ function NavHome() {
 
   return (
     <header className="absolute w-full">
-      <nav className="flex items-center justify-evenly text-lg">
+      <nav className="flex items-center justify-evenly text-lg max-xl:justify-between max-xl:text-base">
         <ul className="flex w-1/4 justify-evenly">
           <div className="flex flex-col">
             <AnimatedLink
@@ -110,11 +110,11 @@ function NavHome() {
           </div>
         </ul>
 
-        <Link to={"/"}>
-          <img src={logo} className="w-[600px]" alt="" />
+        <Link to={"/"} className="max-w-[600px]">
+          <img src={logo} className="w-fit" alt="game of thrones logo" />
         </Link>
 
-        <ul className="flex w-1/4 justify-evenly max-md:hidden">
+        <ul className="flex w-1/4 justify-evenly text-center">
           <div className="flex flex-col">
             <AnimatedLink
               onMouseEnter={() => controls3.start({ scaleX: 1 })}

@@ -81,7 +81,7 @@ function NavHomeSmall({ barsImage, aditionalStyles }) {
           <img src={logo} className="w-[600px] max-md:w-[300px]" alt="" />
         </Link>
 
-        <ul className="flex w-1/4 justify-evenly max-md:hidden">
+        <ul className="flex w-1/4 justify-evenly max-xl:hidden">
           <Link to={"/makingof"}>Making of GOT</Link>
           <Link to={"/valoraciones"}>Valoraciones</Link>
         </ul>

@@ -8,7 +8,7 @@ function ResponsiveNav() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 600);
+      setIsSmallScreen(window.innerWidth < 1050);
     };
 
     window.addEventListener("resize", handleResize);

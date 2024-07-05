@@ -28,7 +28,7 @@ const lannisterCharacter = [
 
 function Footer() {
   return (
-    <footer className="flex w-full bg-[#101113b6] ">
+    <footer className="flex w-full bg-[#101113b6] max-md:flex-col ">
       <nav className="flex flex-row gap-4">
         <ul className="m-0 flex flex-col justify-evenly p-4 max-md:flex-row max-md:gap-4 max-md:py-10 max-md:text-sm md:border-r-2">
           {links.map((elem) => (
@@ -73,6 +73,11 @@ function Footer() {
           ))}
         </ul>
       </nav>
+      <div className="relative w-full">
+        <h5 className="absolute bottom-1 right-2 text-gray-600 max-md:right-32">
+          © 2024 Fabrizio Lora
+        </h5>
+      </div>
     </footer>
   );
 }

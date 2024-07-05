@@ -38,7 +38,7 @@ function CharactersMainContent({ charac }) {
       <main className="flex h-full w-[55%] flex-col rounded-3xl bg-gray-700 p-4 shadow-2xl max-md:order-2 max-md:mt-5 max-md:w-[90%]">
         {/* INTRO */}
         <div>
-          <h1 id="intro" className="mb-5 text-4xl">
+          <h1 id="intro" className="mb-5 font-cinzel text-4xl">
             {charac.name}
           </h1>
           {charac.intro.map((elem) => (
@@ -49,10 +49,10 @@ function CharactersMainContent({ charac }) {
         </div>
         {/* HISTORIA */}
         <div>
-          <h2 id="historia" className="border-b-2 text-3xl">
+          <h2 id="historia" className="border-b-2 font-cinzel text-3xl">
             Historia
           </h2>
-          <h3 id="oyn" className="my-4 text-2xl font-bold">
+          <h3 id="oyn" className="my-4 font-cinzel text-2xl font-bold">
             Origen y nacimiento
           </h3>
           {charac.oynp.map((elem) => (
@@ -63,7 +63,7 @@ function CharactersMainContent({ charac }) {
         </div>
         {/* INFANCIA Y JUVENTUD */}
         <div>
-          <h3 id="iyj" className="my-4 text-2xl font-bold">
+          <h3 id="iyj" className="my-4 font-cinzel text-2xl font-bold">
             Infancia y juventud
           </h3>
           {charac.iyj.map((elem) => (

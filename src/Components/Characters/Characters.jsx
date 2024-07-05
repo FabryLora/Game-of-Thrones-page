@@ -48,14 +48,14 @@ function Characters() {
 
   return (
     <main className="overflow-hidden">
-      <div className="grid grid-cols-2 grid-rows-3 items-center justify-items-center bg-white bg-gradient-to-b from-white from-90% to-[#1e1e1e] bg-cover bg-center bg-no-repeat pb-4 max-md:pt-24 md:grid-cols-3 md:grid-rows-2">
+      <div className="grid grid-cols-2 grid-rows-3 items-center justify-items-center bg-white bg-gradient-to-b from-white from-90% to-[#1e1e1e] bg-cover bg-center bg-no-repeat pb-4 max-md:pt-24 md:max-h-[700px] md:grid-cols-3 md:grid-rows-2">
         {houses.map((element) => (
           <button
             key={element.ref}
             onClick={() => scrollToElement(element.ref)}
             className="md:w-[50%]"
           >
-            <img src={element.src} alt="" />
+            <img className="max-w-[90%]" src={element.src} alt="" />
           </button>
         ))}
       </div>

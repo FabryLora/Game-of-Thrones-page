@@ -19,13 +19,13 @@ function Home() {
           {/* <Link to={"/"} className="mb-36">
             <img src={logo} width="800px" alt="" />
           </Link> */}
-          <p className="mb-5 mt-96 text-4xl font-bold max-md:mt-10 max-md:text-center max-md:text-2xl ">
+          <p className="mb-5 mt-[500px] text-4xl font-bold max-md:mt-10 max-md:text-center max-md:text-2xl ">
             {" "}
             Who will sit on the iron throne?{" "}
           </p>
-          <div className="flex items-center justify-evenly max-md:h-[220px] max-md:w-full">
+          <div className="relative h-0 w-full overflow-hidden pb-[56.25%]">
             <iframe
-              className="h-[50rem] w-[87.5rem] max-md:h-full max-md:w-full"
+              className="left- absolute top-0 h-full w-full md:px-20"
               src="https://www.youtube.com/embed/bjqEWgDVPe0"
               title="GAME OF THRONES - SEASON 1- TRAILER"
               frameBorder="0"
@@ -43,15 +43,16 @@ function Home() {
         style={{ backgroundImage: `url("${secondSectionImage}")` }}
       >
         <div className="flex w-full flex-col items-center justify-center bg-[rgba(0,0,0,0.5)]">
-          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl max-md:w-[90%] max-md:flex-col max-md:bg-[rgba(0,0,0,0.7)] max-md:p-3">
-            <AnimatedLink whileHover={{ scale: 1.1 }} to={"/characters"}>
+          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly gap-3 rounded-xl max-[1323px]:w-[60%] max-[1323px]:flex-col max-[1323px]:bg-[rgba(0,0,0,0.7)] max-[1323px]:p-3 max-md:w-[90%]">
+            <AnimatedLink whileHover={{ scale: 1.07 }} to={"/characters"}>
               <img
                 className="max-h-72 rounded-xl"
                 src={charactesImage}
                 alt="arbol familiar"
               />
             </AnimatedLink>
-            <div className="flex w-2/4 flex-col max-md:mt-3 max-md:w-full max-md:items-center">
+            <div className="flex w-2/4 flex-col max-[1323px]:mt-3 max-[1323px]:w-full max-[1323px]:items-center">
+              <h3 className="pb-2 text-3xl font-bold">Personajes</h3>
               <p className="w-full">
                 En esta sección se muestran los personajes icónicos de Game of
                 Thrones, con detalles sobre sus características, historias y
@@ -68,8 +69,9 @@ function Home() {
             </div>
           </div>
 
-          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl max-md:w-[90%] max-md:flex-col max-md:bg-[rgba(0,0,0,0.7)] max-md:p-3">
-            <div className="flex w-2/4 flex-col max-md:order-2 max-md:mt-3 max-md:w-full max-md:items-center">
+          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl max-[1323px]:w-[60%] max-[1323px]:flex-col max-[1323px]:bg-[rgba(0,0,0,0.7)] max-[1323px]:p-3 max-md:w-[90%]">
+            <div className="flex w-2/4 flex-col max-[1323px]:order-2 max-[1323px]:mt-3 max-[1323px]:w-full max-[1323px]:items-center">
+              <h3 className="pb-2 text-3xl font-bold">Making of GOT</h3>
               <p className="w-full">
                 Adéntrate en el fascinante detrás de escena de Game of Thrones.
                 En esta sección, conocerás cómo se creó la música épica, los
@@ -86,7 +88,7 @@ function Home() {
               </Link>
             </div>
             <AnimatedLink
-              className="max-md:order-1"
+              className="max-[1323px]:order-1"
               whileHover={{ scale: 1.1 }}
               to={"/makingof"}
             >
@@ -98,7 +100,7 @@ function Home() {
             </AnimatedLink>
           </div>
 
-          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl max-md:w-[90%] max-md:flex-col max-md:bg-[rgba(0,0,0,0.7)] max-md:p-3">
+          <div className="m-16 flex min-h-72 w-4/5 flex-nowrap items-center justify-evenly rounded-xl max-[1323px]:w-[60%] max-[1323px]:flex-col max-[1323px]:bg-[rgba(0,0,0,0.7)] max-[1323px]:p-3 max-md:w-[90%]">
             <AnimatedLink whileHover={{ scale: 1.1 }} to={"/valoraciones"}>
               <img
                 className="max-h-72 rounded-xl"
@@ -106,7 +108,8 @@ function Home() {
                 alt="foto del macking off"
               />
             </AnimatedLink>
-            <div className="flex w-2/4 flex-col max-md:mt-3 max-md:w-full max-md:items-center">
+            <div className="flex w-2/4 flex-col max-[1323px]:mt-3 max-[1323px]:w-full max-[1323px]:items-center">
+              <h3 className="pb-2 text-3xl font-bold">Valoraciones</h3>
               <p className="w-full">
                 Aquí, los fans de Game of Thrones pueden dejar sus opiniones y
                 comentarios sobre la serie. Comparte tus pensamientos sobre los
