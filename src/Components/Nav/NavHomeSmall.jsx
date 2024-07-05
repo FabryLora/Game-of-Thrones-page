@@ -32,7 +32,7 @@ function NavHomeSmall({ barsImage, aditionalStyles }) {
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
-              className="absolute top-[100%] h-fit w-[95%] rounded-md bg-black"
+              className="absolute top-[100%] z-10 h-fit w-[95%] rounded-md bg-black"
             >
               <ul className="flex flex-col gap-3 p-4">
                 <Link to={"/"}>Inicio</Link>
@@ -59,7 +59,7 @@ function NavHomeSmall({ barsImage, aditionalStyles }) {
                         initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -20, opacity: 0 }}
-                        className="my-3 flex flex-col gap-4 border-y-2 py-4"
+                        className=" my-3 flex flex-col gap-4 border-y-2 py-4"
                       >
                         {characters.map((items) => (
                           <Link key={items.name} to={items.href}>
