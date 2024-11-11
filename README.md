@@ -15,13 +15,22 @@
 
 ## Views
 ### Home
+
 <img src="https://github.com/FabryLora/Game-of-Thrones-page/blob/master/src/images/prints/chrome-capture-2024-11-11.png?raw=true" />
+
 ### Characters
+
 <img src="https://github.com/FabryLora/Game-of-Thrones-page/blob/master/src/images/prints/charactersfirst.png?raw=true" />
 <img src="https://github.com/FabryLora/Game-of-Thrones-page/blob/master/src/images/prints/characterssecond.png?raw=true" />
+
 - Character only
+
 <img src="https://github.com/FabryLora/Game-of-Thrones-page/blob/master/src/images/prints/personajes.png?raw=true" />
+
 ### Making of Game of Thrones
+
 <img src="https://github.com/FabryLora/Game-of-Thrones-page/blob/master/src/images/prints/makingof.png?raw=true" />
+
 ### Ratings
+
 <img src="https://github.com/FabryLora/Game-of-Thrones-page/blob/master/src/images/prints/valoraciones.png?raw=true" />
